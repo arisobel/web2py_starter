@@ -1,4 +1,4 @@
-# web2py_starte
+# web2py_starter
 A [Admin Lte](https://adminlte.io/themes/AdminLTE/index2.html) based Starter using web2py framework
 
 # Initial version at branch v_00
