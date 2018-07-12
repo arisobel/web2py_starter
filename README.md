@@ -27,5 +27,5 @@ Please take a quick gander at the [contribution guidelines](https://github.com/a
 ### Tutorials/courses
 
 * [Curso web2py (pt-br)](https://www.youtube.com/playlist?list=PL5CWed0-MqAPLiMS5gJvWKZDBez-vcRuN) - IPortuguese course by Bruno Rocha
-* [Passo a passo web2py (pt-br)] (https://juliarizza.wordpress.com/2015/08/03/passo-a-passo-web2py-1o-passo/) - IPortuguese cours by Julia Rizza
+* [Passo a passo web2py (pt-br)](https://juliarizza.wordpress.com/2015/08/03/passo-a-passo-web2py-1o-passo/) - IPortuguese cours by Julia Rizza
 
