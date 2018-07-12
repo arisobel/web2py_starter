@@ -1,0 +1,100 @@
+{{extend 'layout_starter.html'}}
+
+
+
+{{if not has_admin:}}
+
+    <div class="callout callout-info">
+        <h2>Benvinto ao Starer Web2py - Admin Lte!</h2>
+
+        <p>Por ser o primeiro acesso, favor preencher a senha do <b>SuperUSer</b> 'admin' : .</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <!-- Horizontal Form -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <i class="icon fa fa-user"></i>
+              <h3 class="box-title">Cadastre a senha do 'admin'</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal" id="form_start" action="{{=URL(c='start',f='get_started')}}" method="POST">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">SuperUser</label>
+
+                  <div class="col-sm-10">
+                    <input  class="form-control" id="superuser" value="admin" readonly disabled>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+                  <div class="col-sm-10">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                  </div>
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="submit" class="btn btn-info pull-right">Sign in</button>
+              </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>
+          <!-- /.box -->
+         
+
+          </div>
+          <!-- /.box -->
+        <div class="col-md-3">
+        </div>
+    </div>
+    <!-- /.row -->
+        
+        
+      </div>
+{{else:}}
+        {{if must_login:}}
+         <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                  <!-- Horizontal Form -->
+                  <div class="box box-info">
+                    <div class="box-header with-border">
+                      <i class="icon fa fa-user"></i>
+                      <h3 class="box-title">Faça Login!</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <!-- form start -->
+                        <div class="callout callout-info">
+                            <h3>Vá para a Página de login </h3>
+
+                            <p>Vá para a Página de login para iniciar o uso do sistema e COnfig dos Menus</p>
+                            
+                        </div>
+                        
+                        <a href="{{=URL('user', 'login')}}"><i class="icon fa fa-user"></i></a>
+                  </div>
+                  <!-- /.box -->
+                 
+
+                  </div>
+                  <!-- /.box -->
+                <div class="col-md-3">
+                </div>
+        </div>
+            <!-- /.row -->
+                
+
+
+         
+        {{else:}}
+        <h1>blaaaaaaa</h1>
+        {{pass}}
+{{pass}}

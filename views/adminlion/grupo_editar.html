@@ -1,0 +1,40 @@
+{{extend 'layout.html'}}
+<h1>Admin Lion</h1>
+<h3>Editar Grupo {{=request.args(0) or "Novo"}}</h3>
+
+<div class="form_header row_buttons  ">
+	<a class="w2p_trap button btn" href={{=URL(
+		'adminlion','groups_manage')}}> <span
+		class="icon leftarrow icon-arrow-left"></span> <span
+		class="buttontext button" title="Back">Voltar</span>
+	</a>
+</div>
+{{=form_grupo_editar.custom.begin}}
+
+
+   <div class="row-fluid">
+		<div class="span12">
+			<label class='label'>{{=db.auth_group.role.label}}</label>
+			{{=form_grupo_editar.custom.widget.role}}
+		</div>
+   </div>
+   <div class="row-fluid">
+       	<div class="span12">
+			<label class='label'>{{=db.auth_group.description.label}}</label>
+			{{=form_grupo_editar.custom.widget.description}}
+		</div>
+   </div>
+{{=form_grupo_editar.custom.submit}}
+{{=form_grupo_editar.custom.end}}
+   <div class="row-fluid">
+       	<div class="span6">
+           <div class='well'>
+               {{=form_permissions}}
+           </div>
+        </div>
+       	<div class="span6">
+           <div class='well'>
+               {{=form_users}}
+           </div>
+        </div>
+   </div>
