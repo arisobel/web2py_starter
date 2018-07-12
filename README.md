@@ -14,7 +14,7 @@ Please take a quick gander at the [contribution guidelines](https://github.com/a
 
 ### Telegram
 
-* [Web2py Brasil] (https://t.me/web2pybrasil) Portuguse speakers group
+* [Web2py Brasil](https://t.me/web2pybrasil) Portuguse speakers group
 
 
 ## Websites
