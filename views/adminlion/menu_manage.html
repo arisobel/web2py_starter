@@ -1,0 +1,44 @@
+{{extend 'layout_starter.html'}}
+
+<div class='row'>
+    <div class='col-md-5'>
+        <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">{{="%s" % (T('Menu Master'))}}</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+                  <i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+                {{=form_menu_master}}
+                
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <a class="w2p_trap button btn btn-default pull-left" href={{=URL('adminlion','menu_manage',user_signature=True)}}> 
+                    <span class="icon leftarrow icon-arrow-left fa fa-arrow-circle-left"></span> 
+                    <span class="buttontext button" title="Back">Voltar</span>
+                </a>
+            </div>
+            <!-- /.box-footer-->
+        </div>            
+    </div>  
+    <div class='col-md-7'>
+        <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">{{="%s" % (T('Menu Detalhes'))}}</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+                  <i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+                {{=form_menu}}
+                
+            </div>
+            <!-- /.box-body -->
+        </div>            
+    </div>     
+</div>       
+

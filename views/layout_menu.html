@@ -1,0 +1,118 @@
+{{#hidden = None if auth.user else 'hidden'}}
+
+
+{{ if auth.is_logged_in():}}
+<ul class="sidebar-menu">
+
+    <li class="header">{{=response.title or request.application}}</li>
+    {{if session._sys_defcontroller and session._sys_deffunction:}}
+        {{url_home = URL(session._sys_defcontroller,session._sys_deffunction)}}
+    {{else:}}
+        {{url_home = URL('default','index')}}
+    {{pass}}    
+    <li class="treeview {{=user_visibility('Admin')}}">
+    {{=sidebar_menu_item(T('Home'),  url_home,icon='home')}}
+    </li>
+
+{{for m in response.menu:}}
+    {{active = ""}}
+    {{master = m[0]['nome_master']}}
+    {{if m[0]['nome_master'] == session._menu_fat: active = "active"}}
+    <li class="treeview menu-father {{=active}}" data="{{=master}}">
+    {{=sidebar_menu_item(T(m[0]['nome_master']), icon=m[0]['iconemaster'])}}
+        <ul class="treeview-menu">
+        {{for x in m[1]:}}
+            {{=sidebar_menu_item(T(x['nome']), x['url'], icon=x['icon'], master=master)}}
+        {{pass}}            
+        </ul>
+  
+    </li>
+    {{pass}} 
+    
+</ul>
+{{pass}} 
+{{if auth.has_permission('admin'):}}
+<ul class="sidebar-menu">
+
+    <li class="header">AdminLion</li>
+
+                <li class="treeview menu-father " data="Admin">
+                <a href="#"><i class="fa fa-cog"> </i><span>Admin</span><i class="fa fa-angle-left pull-right"> </i></a>
+                    <ul class="treeview-menu">
+                    
+                        <li><a class="menu-tree menu-item" data="User" href="{{=URL('adminlion','users_manage')}}"><i class="fa fa-user"> </i><span>Users</span></a></li>
+                        <li><a class="menu-tree menu-item" data="Groups" href="{{=URL('adminlion','groups_manage')}}"><i class="fa fa-users"> </i><span>Groups</span></a></li>
+                        <li><a class="menu-tree menu-item" data="Atual" href="{{=URL('adminlion','menu_manage')}}"><i class="fa fa-list"> </i><span>Menus</span></a></li>
+                                
+                    </ul>
+              
+                </li>
+
+            
+
+</ul>
+{{pass}} 
+<!-- Company Info for Guests -->
+
+<ul class="sidebar-menu">
+
+    <li class="header">COMPANY</li>
+
+{{=sidebar_menu_item('About', URL('default', 'about'), icon='book')}}
+{{=sidebar_menu_item('Privacy', URL('default', 'privacy'), icon='book')}}
+{{=sidebar_menu_item('Terms of Use', URL('default', 'tou'), icon='book')}}
+
+</ul>
+
+<style>
+
+.sidebar .sidebar-menu .active .treeview-menu {
+display: block;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+    $('.sidebar-menu').tree();
+
+
+    $(window).resize(function(){
+        console.log($(window).width());
+        if ( $(window).width() > 1300) {  
+              
+          
+          $("body").removeClass("sidebar-collapse");
+        } 
+        else {
+          $("body").addClass("sidebar-collapse");
+        }
+
+
+    });
+
+});
+
+$(".menu-father").on("click", function(){
+    var menu_fat = $(this).attr("data");
+    
+    
+    $.ajax({
+      url: "{{=URL('default','menu_session')}}",
+      data: {"menu_fat":menu_fat}
+    }).done(function() {
+      console.log(menu_fat);
+    });
+});
+$(".menu-item").on("click", function(){
+    var menu_fat_it = $(this).attr("data");
+    
+    
+    $.ajax({
+      url: "{{=URL('default','menu_item_session')}}",
+      data: {"menu_fat_it":menu_fat_it}
+    }).done(function() {
+      console.log(menu_fat_it);
+    });
+});
+
+</script>
