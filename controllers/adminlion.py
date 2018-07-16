@@ -79,11 +79,11 @@ def grupo_editar():
     else:
        id_grupo = 0
 
-    buttons = [TAG.button('Salvar',_type="submit",_class = "btn-success")]
+    buttons = [TAG.button(T(' Save and continue'), _type="submit", _class="fa fa-save btn bg-olive margin")]
 
     form_grupo_editar = SQLFORM(db.auth_group,id_grupo if id_grupo != 0 else None,
                                       buttons =buttons,
-                                      submit_button='Salvar',
+                                      submit_button=T(' Save and continue'),
                                       field_id='id',
                                       _id='form_grupo_editar')
 
@@ -235,7 +235,7 @@ def user_editar():
     else:
        id_user = 0
 
-    buttons = [TAG.button('Salvar',_type="submit",_class = "btn-success")]
+    buttons = [TAG.button(T(' Save and continue'), _type="submit", _class="fa fa-save btn bg-olive margin")]
 
     # Form edição do colaborador
     if id_user == 0:
@@ -444,11 +444,11 @@ def menu_editar():
     if not id_menu:
        id_menu = 0
 
-    buttons = [TAG.button('Salvar',_type="submit",_class = "btn-success")]
+    buttons = [TAG.button(T(' Save and continue'), _type="submit", _class="fa fa-save btn bg-olive margin")]
 
     form_menu_editar = SQLFORM(db.t_menu,id_menu if id_menu !=0 else None,
                                 buttons =buttons,
-                                submit_button='Salvar',
+                                submit_button=T(' Save and continue'),
                                 field_id='id',
                                 _id='form_menu_editar')
 
