@@ -46,7 +46,7 @@
 
 '''
 
-
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def groups_manage():
     form_groups = SQLFORM.grid(db.auth_group,
@@ -68,6 +68,7 @@ def groups_manage():
 # funcao de edicao dos artigos
 #=====================================================================
 
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def grupo_editar():
 # Armazena o ID do grupo
@@ -123,6 +124,7 @@ def grupo_editar():
 # funcao de listar users do Grupo
 #=====================================================================
 
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def users_listar():
 
@@ -152,6 +154,7 @@ def users_listar():
 # funcao de listar permissions do Grupo
 #=====================================================================
 
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def permissions_listar():
 
@@ -177,6 +180,8 @@ def permissions_listar():
 #=====================================================================
 # funcao de Users Manage
 #=====================================================================
+
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def users_manage():
     form_users = SQLFORM.grid(db.auth_user,
@@ -199,6 +204,8 @@ def users_manage():
 #=====================================================================
 # funcao de Users Manage
 #=====================================================================
+
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def systems_manage():
     form_systems = SQLFORM.grid(db.t_systems,
@@ -217,6 +224,7 @@ def systems_manage():
 # funcao de Users Manage
 #=====================================================================
 
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def user_editar():
 # Armazena o ID do grupo
@@ -280,6 +288,8 @@ def user_editar():
 #=====================================================================
 # funcao de Users listar grupos
 #=====================================================================
+
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def users_listar_grupos():
 
@@ -309,6 +319,8 @@ def users_listar_grupos():
 #=====================================================================
 # funcao de Users listar Sistemas associados
 #=====================================================================
+
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def users_listar_sys():
 
@@ -339,6 +351,8 @@ def users_listar_sys():
 #=====================================================================
 # funcao de Users listar Sistemas associados
 #=====================================================================
+
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def menu_listar_sys():
 
@@ -371,6 +385,7 @@ def menu_listar_sys():
 # funcao de Menu Manage
 #=====================================================================
 
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def menu_manage():
     form_menu = SQLFORM.grid(db.t_menu,
@@ -400,6 +415,9 @@ def menu_manage():
 #=====================================================================
 # funcao de Menu Master
 #=====================================================================
+
+@auth.requires_membership(role="admin")
+@auth.requires_login()
 def menumaster_listar():
     frmmaster= SQLFORM.grid(db.t_menu_master,
           buttons_placement='left', # Botões a esquerda
@@ -417,6 +435,7 @@ def menumaster_listar():
 # funcao de Menu Editar
 #=====================================================================
 
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def menu_editar():
 # Armazena o ID do grupo
@@ -464,6 +483,8 @@ def menu_editar():
 #=====================================================================
 # funcao de Users listar grupos
 #=====================================================================
+
+@auth.requires_membership(role="admin")
 @auth.requires_login()
 def listar_grupos_menu():
 
