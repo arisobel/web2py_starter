@@ -62,7 +62,7 @@ def groups_manage():
        redirect(URL('grupo_editar', args=idd ))
 
 
-    return dict(form_groups=DIV(form_groups,_class='well'))
+    return dict(form_groups=form_groups)
 
 #=====================================================================
 # funcao de edicao dos artigos
