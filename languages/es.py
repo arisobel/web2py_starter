@@ -177,8 +177,8 @@
 'English': 'English',
 'enter a number between %(min)g and %(max)g': 'introduzca un numero entre %(min)g y %(max)g',
 'enter a value': 'introduzca un valor',
-'Enter an integer between %(min)g and %(max)g': 'Enter an integer between %(min)g and %(max)g',
 'enter an integer between %(min)g and %(max)g': 'introduzca un número entero entre %(min)g y %(max)g',
+'Enter an integer between %(min)g and %(max)g': 'Enter an integer between %(min)g and %(max)g',
 'enter date and time as %(format)s': 'introduzca fecha y hora como %(format)s',
 'Error': 'Error',
 'Error logs for "%(app)s"': 'Bitácora de errores para "%(app)s"',
@@ -262,9 +262,15 @@
 'List': 'List',
 'Live Chat': 'Chat en vivo',
 'loading...': 'cargando...',
+<<<<<<< HEAD
+'Log In': 'Iniciar sesion',
+'Log In here ': 'Log In here ',
+'Log out': 'Log out',
+=======
 'Log In': 'Iniciar sesión',
 'Log In here ': 'Inicie sesión aquí ',
 'Log out': 'Cerrar sesión',
+>>>>>>> f5fcda6778803a5f94e07d3ac3b2528eb1425da8
 'Logged in': 'Sesión iniciada',
 'Logged out': 'Sesión finalizada',
 'Login': 'Inicio de sesión',
@@ -338,8 +344,12 @@
 'Permissions': 'Permisos',
 'Phone': 'Teléfono',
 'please input your password again': 'por favor introduzca su contraseña otra vez',
+<<<<<<< HEAD
+'Please, Log In': 'Please, Log In',
+=======
 "Please insert a password for 'admin'": "Por favor introduzca una contraseña para el 'admin'",
 'Please, Log In': 'Por favor, inicie sesión',
+>>>>>>> f5fcda6778803a5f94e07d3ac3b2528eb1425da8
 'Plugins': 'Plugins',
 'Portuguese': 'Portugués',
 'Powered by': 'Este sitio usa',
@@ -440,7 +450,11 @@
 'Timestamp': 'Marca de tiempo',
 'to  previous version.': 'a la versión previa.',
 'To emulate a breakpoint programatically, write:': 'Emular un punto de ruptura programáticamente, escribir:',
+<<<<<<< HEAD
+'To use the application you must first Log In': 'To use the application you must first Log In',
+=======
 'To use the application you must first Log In': 'Para usar la aplicación debe iniciar sesión',
+>>>>>>> f5fcda6778803a5f94e07d3ac3b2528eb1425da8
 'to use the debugger!': '¡usar el depurador!',
 'toggle breakpoint': 'alternar punto de ruptura',
 'Toggle comment': 'Alternar comentario',
