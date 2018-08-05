@@ -14,6 +14,7 @@ configs.langs = {
                     'br' : {'lang':'pt-br', 'initial':'PT','name':T('Portuguese')},
                     'es' : {'lang':'es', 'initial':'ES','name':T('Español')},
                     'us' : {'lang':'default', 'initial':'EN','name':T('English')},
+                    'il' : {'lang':'he', 'initial':'HE','name':T('Hebrew')},
                     }
 if os_plataform == "Windows":
     configs.langs['il'] = {'lang':'he', 'initial':'HE', 'name':T('Hebrew')}
