@@ -23,7 +23,7 @@ if os_plataform == "Windows":
     configs.langs['us']['locale'] = 'English_United States.1252'
                     
 elif os_plataform == "Linux":
-    #configs.langs['il']['locale'] = 'he_IL.utf8'
+    configs.langs['il']['locale'] = 'he_IL.utf8'
     configs.langs['br']['locale'] = 'pt_BR.UTF-8'
     configs.langs['es']['locale'] = 'es_ES.UTF-8'
     configs.langs['us']['locale'] = 'en_US.UTF-8'

@@ -1,4 +1,4 @@
-timestamp: 2018-08-05T12:00:00.230000
+timestamp: 2018-08-05T13:55:10.822324
 CREATE TABLE "auth_user"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "first_name" CHAR(128),
@@ -11,21 +11,21 @@ CREATE TABLE "auth_user"(
     "registration_id" CHAR(512)
 );
 success!
-timestamp: 2018-08-05T12:00:00.559000
+timestamp: 2018-08-05T13:55:10.946709
 CREATE TABLE "auth_group"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "role" CHAR(512),
     "description" TEXT
 );
 success!
-timestamp: 2018-08-05T12:00:00.686000
+timestamp: 2018-08-05T13:55:11.016523
 CREATE TABLE "auth_membership"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
     "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  
 );
 success!
-timestamp: 2018-08-05T12:00:00.851000
+timestamp: 2018-08-05T13:55:11.089459
 CREATE TABLE "auth_permission"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  ,
@@ -34,7 +34,7 @@ CREATE TABLE "auth_permission"(
     "record_id" INTEGER
 );
 success!
-timestamp: 2018-08-05T12:00:01.005000
+timestamp: 2018-08-05T13:55:11.215919
 CREATE TABLE "auth_event"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "time_stamp" TIMESTAMP,
@@ -44,7 +44,7 @@ CREATE TABLE "auth_event"(
     "description" TEXT
 );
 success!
-timestamp: 2018-08-05T12:00:01.126000
+timestamp: 2018-08-05T13:55:11.305002
 CREATE TABLE "auth_cas"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
@@ -54,7 +54,7 @@ CREATE TABLE "auth_cas"(
     "renew" CHAR(1)
 );
 success!
-timestamp: 2018-08-05T12:00:01.299000
+timestamp: 2018-08-05T13:55:11.375365
 CREATE TABLE "t_menu_master"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "f_menu_master" CHAR(512),
@@ -63,7 +63,7 @@ CREATE TABLE "t_menu_master"(
     "f_icon" CHAR(512)
 );
 success!
-timestamp: 2018-08-05T12:00:01.440000
+timestamp: 2018-08-05T13:55:11.450941
 CREATE TABLE "t_menu"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "f_menu_master" INTEGER REFERENCES "t_menu_master" ("id") ON DELETE CASCADE  ,
@@ -76,14 +76,14 @@ CREATE TABLE "t_menu"(
     "f_need_sign" CHAR(1)
 );
 success!
-timestamp: 2018-08-05T12:00:01.588000
+timestamp: 2018-08-05T13:55:11.591804
 CREATE TABLE "t_menu_grupo"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "f_menu" INTEGER REFERENCES "t_menu" ("id") ON DELETE CASCADE  ,
     "f_grupo" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  
 );
 success!
-timestamp: 2018-08-05T12:00:01.686000
+timestamp: 2018-08-05T13:55:11.690914
 CREATE TABLE "t_systems"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "f_acronym" CHAR(512),
@@ -97,7 +97,7 @@ CREATE TABLE "t_systems"(
     "f_default_function" CHAR(512)
 );
 success!
-timestamp: 2018-08-05T12:00:01.851000
+timestamp: 2018-08-05T13:55:11.758690
 CREATE TABLE "t_menu_system"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "f_system" INTEGER REFERENCES "t_systems" ("id") ON DELETE CASCADE  ,
@@ -105,7 +105,7 @@ CREATE TABLE "t_menu_system"(
     "f_obs" CHAR(512)
 );
 success!
-timestamp: 2018-08-05T12:00:02.004000
+timestamp: 2018-08-05T13:55:11.858131
 CREATE TABLE "t_user_system"(
     "id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "f_user" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
