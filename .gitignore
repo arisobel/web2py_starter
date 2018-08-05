@@ -1,0 +1,4 @@
+/databases *
+/errors *
+/sessions *
+*.pyc
