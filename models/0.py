@@ -28,6 +28,11 @@ elif os_plataform == "Linux":
     configs.langs['br']['locale'] = 'pt_BR.UTF-8'
     configs.langs['es']['locale'] = 'es_ES.UTF-8'
     configs.langs['us']['locale'] = 'en_US.UTF-8'
+    
+elif os_plataform == "Darwin":
+    configs.langs['br']['locale'] = 'pt_BR.UTF-8'
+    configs.langs['es']['locale'] = 'es_ES.UTF-8'
+    configs.langs['us']['locale'] = 'en_US.UTF-8'
 
 
 
